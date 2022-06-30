@@ -1,0 +1,51 @@
+
+Context Root: david-tobrise-tech11-assignment-1.0-SNAPSHOT
+Documentation: Ensure you have payara 5 installed and Java 8+
+1. Extract the folder
+2. cd into the context root:
+3. type this command: mvn clean package payara-micro:start
+
+ENDPOINTS:
+1. Create a New User
+METHOD: POST
+Endpoint: localhost:8080/david-tobrise-tech11-assignment-1.0-SNAPSHOT/api/v1/user-resource/new-user
+Request Body:
+{
+	"firstName":"Tome",
+	"lastName":"James",
+	"email":"tom@gmail.com",
+	"password":"jaemy123",
+	"birthDate":"1976-04-24"
+}
+Response: JSON
+
+2. Get a particular User
+METHOD: GET
+Endpoint: localhost:8080/david-tobrise-tech11-assignment-1.0-SNAPSHOT/api/v1/user-resource/user/3
+Response: JSON
+
+3. List All Users
+METHOD: GET
+Endpoint: localhost:8080/david-tobrise-tech11-assignment-1.0-SNAPSHOT/api/v1/user-resource/users
+Response: JSON
+
+4.Delete a User
+METHOD: DELETE
+Endpoint: localhost:8080/david-tobrise-tech11-assignment-1.0-SNAPSHOT/api/v1/user-resource/delete-user/3
+Response: JSON
+
+5. Update a User
+METHOD: PUT
+Endpoint: localhost:8080/david-tobrise-tech11-assignment-1.0-SNAPSHOT/api/v1/user-resource/update-user/3
+Request Body:
+{
+	"firstName":"Tome",
+	"lastName":"James",
+	"email":"tom@gmail.com",
+	"password":"jaemy123",
+	"birthDate":"1976-04-24"
+}
+Response: JSON
+
+
+
